@@ -164,8 +164,8 @@ window.INVITATION_CONFIG = {
   },
   "wellWishes": {
     "eyebrow": "A beautiful beginning",
-    "message": "We look forward to celebrating with you.",
-    "signoff": "With love, Arish & Nayyarah"
+    "message": "Together With Our Loved Ones",
+    "signoff": "The Farooqui Family"
   },
   "interface": {
     "muteMusic": "Mute music",
