@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Noor Invites//Dr Arish and Dr Nayyara Manjha//EN
+PRODID:-//Noor Invites//Dr Arish and Dr Nayyarah Manjha//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
@@ -8,8 +8,8 @@ UID:arish-nayyara-manjha-20261228@noorinvites.com
 DTSTAMP:20261108T000000Z
 DTSTART:20261228T133000Z
 DTEND:20261228T163000Z
-SUMMARY:Dr. Arish & Dr. Nayyara — Manjha Ceremony
+SUMMARY:Dr. Arish & Dr. Nayyarahh — Manjha Ceremony
 LOCATION:Canossa Convent High School\, Mahim West\, Mumbai - 400016
-DESCRIPTION:Manjha Ceremony for Dr. Arish & Dr. Nayyara\nDate: Monday\, 28 December 2026 at 7:00 pm IST.\nVenue: Canossa Convent High School\, Mahim West\, Mumbai - 400016.
+DESCRIPTION:Manjha Ceremony for Dr. Arish & Dr. Nayyarahh\nDate: Monday\, 28 December 2026 at 7:00 pm IST.\nVenue: Canossa Convent High School\, Mahim West\, Mumbai - 400016.
 END:VEVENT
 END:VCALENDAR

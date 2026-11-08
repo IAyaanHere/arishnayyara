@@ -1,15 +1,15 @@
-/** Wedding invitation: Dr. Arish & Dr. Nayyara — Dawat-e-Walima */
+/** Wedding invitation: Dr. Arish & Dr. Nayyarah — Dawat-e-Walima */
 window.INVITATION_CONFIG = {
   "site": {
     "language": "en",
-    "title": "Dr. Arish & Dr. Nayyara — Dawat e Walima",
-    "description": "Wedding celebration and Dawat-e-Walima of Dr. Arish (s/o Shamshul Qamar Farooqui) & Dr. Nayyara (d/o Mohd Nazim).",
-    "ogTitle": "Dawat-e-Walima — Dr. Arish & Dr. Nayyara",
-    "ogDescription": "Tap to Open · Wedding Invitation for Dr. Arish & Dr. Nayyara"
+    "title": "Dr. Arish & Dr. Nayyarah — Dawat e Walima",
+    "description": "Wedding celebration and Dawat-e-Walima of Dr. Arish (s/o Shamshul Qamar) & Dr. Nayyarah (d/o Mohd Nazim).",
+    "ogTitle": "Dawat-e-Walima — Dr. Arish & Dr. Nayyarah",
+    "ogDescription": "Tap to Open · Wedding Invitation for Dr. Arish & Dr. Nayyarah"
   },
   "couple": {
     "groom": "Dr. Arish",
-    "bride": "Dr. Nayyara",
+    "bride": "Dr. Nayyarah",
     "separator": "&"
   },
   "theme": {
@@ -39,7 +39,7 @@ window.INVITATION_CONFIG = {
   },
   "opening": {
     "label": "Open invitation",
-    "accessibleLabel": "Open wedding invitation for Dr. Arish and Dr. Nayyara",
+    "accessibleLabel": "Open wedding invitation for Dr. Arish and Dr. Nayyarahh",
     "musicVolume": 0.3,
     "transitionMs": 300,
     "playbackTimeoutMs": 12000,
@@ -48,7 +48,7 @@ window.INVITATION_CONFIG = {
   },
   "hero": {
     "groom": "Dr. Arish",
-    "bride": "Dr. Nayyara",
+    "bride": "Dr. Nayyarah",
     "bismillah": "﷽",
     "families": "Together with our families",
     "occasions": "Reception Ceremony",
@@ -60,7 +60,7 @@ window.INVITATION_CONFIG = {
     "heading": "Dawat e Walima",
     "invitation": "We cordially invite you to grace the Reception Ceremony of our beloved son",
     "groomRelation": "Son of",
-    "groomParents": "Shamshul Qamar Farooqui",
+    "groomParents": "Shamshul Qamar",
     "joining": "Weds",
     "brideRelation": "Daughter of",
     "brideParents": "Mohd Nazim",
@@ -126,7 +126,7 @@ window.INVITATION_CONFIG = {
       "mapUrl": "https://maps.google.com/?q=Canossa+Convent+High+School+Mahim+West+Mumbai+400016",
       "calendarLabel": "Save to calendar",
       "calendarUrl": "./media/walima.ics",
-      "calendarFilename": "Dr-Arish-Dr-Nayyara-Walima.ics",
+      "calendarFilename": "Dr-Arish-Dr-Nayyarah-Walima.ics",
       "invocation": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ"
     }
   ],
@@ -165,7 +165,7 @@ window.INVITATION_CONFIG = {
   "wellWishes": {
     "eyebrow": "A beautiful beginning",
     "message": "We look forward to celebrating with you.",
-    "signoff": "With love, Arish & Nayyara"
+    "signoff": "With love, Arish & Nayyarah"
   },
   "interface": {
     "muteMusic": "Mute music",
