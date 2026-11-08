@@ -27,7 +27,7 @@ window.INVITATION_CONFIG = {
     "introPoster": "./assets/images/ribbon-poster-v2.jpg",
     "heroPoster": "./assets/images/mosque-couple-fast-final.webp",
     "monogram": "./assets/images/gold-an-monogram.png",
-    "ogImage": "./assets/images/wedding-demo.jpg",
+    "ogImage": "./assets/images/wedding-share.jpg",
     "music": "./media/audio-5.mp3",
     "divider": "./assets/images/divider.png",
     "scratchBackground": "./assets/images/mosque-courtyard.webp",
