@@ -450,17 +450,17 @@ body:not(.is-chrome-ready) .hero .scroll-cue,body:not(.is-chrome-ready) .hero + 
   text-decoration: underline;
 }
 
-/* Couple & Parents Names - Refined Deep Warm Gold (Just a subtle touch darker & crisp) */
+/* All Names styled in exact matching color as 'Dawat e Walima' heading (#705236 / var(--maroon)) */
 .formal-name {
   font-family: var(--font-script) !important;
-  font-size: clamp(32px, 9vw, 48px) !important;
+  font-size: clamp(34px, 9.2vw, 52px) !important;
   line-height: 1.15 !important;
   white-space: nowrap !important;
-  color: #8c672e !important;
-  font-weight: 500 !important;
+  color: var(--maroon, #705236) !important;
+  font-weight: 400 !important;
+  -webkit-text-stroke: 0 !important;
   letter-spacing: 0 !important;
-  margin-top: 20px !important;
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5) !important;
+  margin-top: 18px !important;
 }
 
 .formal-family {
@@ -468,7 +468,7 @@ body:not(.is-chrome-ready) .hero .scroll-cue,body:not(.is-chrome-ready) .hero + 
   font-size: 14px !important;
   font-weight: 500 !important;
   letter-spacing: .01em !important;
-  color: #5e432a !important;
+  color: var(--maroon, #705236) !important;
   line-height: 1.65 !important;
   margin: 3px auto 0 !important;
   max-width: 370px !important;
@@ -489,7 +489,8 @@ body:not(.is-chrome-ready) .hero .scroll-cue,body:not(.is-chrome-ready) .hero + 
   font-size: clamp(26px, 6.5vw, 34px) !important;
   font-style: normal !important;
   letter-spacing: 0 !important;
-  color: #8c672e !important;
+  color: var(--maroon, #705236) !important;
+  -webkit-text-stroke: 0 !important;
   margin: 16px auto 8px !important;
 }
 
