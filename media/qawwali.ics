@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Noor Invites//Dr Arish and Dr Nayyara Qawwali Night//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:arish-nayyara-qawwali-20261231@noorinvites.com
+DTSTAMP:20261108T000000Z
+DTSTART:20261231T133000Z
+DTEND:20261231T173000Z
+SUMMARY:Dr. Arish & Dr. Nayyara — Qawali Night
+LOCATION:Canossa Convent High School\, Mahim West\, Mumbai - 400016
+DESCRIPTION:Qawali Night for Dr. Arish & Dr. Nayyara\nDate: Thursday\, 31 December 2026 at 7:00 pm IST.\nVenue: Canossa Convent High School\, Mahim West\, Mumbai - 400016.
+END:VEVENT
+END:VCALENDAR

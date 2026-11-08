@@ -120,7 +120,17 @@
     }
     card.append(title, ornament, details);
     const actions = element('div', 'event-actions');
-    if (event.locationDemoMessage) {
+    if (event.mapUrl) {
+      const link = element('a', 'map-link');
+      link.href = event.mapUrl;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      const ns = 'http://www.w3.org/2000/svg';
+      const svg = document.createElementNS(ns, 'svg'); svg.setAttribute('width', '13'); svg.setAttribute('height', '15'); svg.setAttribute('viewBox', '0 0 24 28'); svg.setAttribute('aria-hidden', 'true');
+      const path = document.createElementNS(ns, 'path'); path.setAttribute('d', 'M12 2a9 9 0 0 0-9 9c0 6 9 15 9 15s9-9 9-15a9 9 0 0 0-9-9Z M15 11a3 3 0 1 1-6 0 3 3 0 0 1 6 0'); path.setAttribute('fill', 'none'); path.setAttribute('stroke', 'currentColor'); path.setAttribute('stroke-width', '1.5'); svg.append(path);
+      link.append(svg, element('span', '', event.mapLabel || 'View location'));
+      actions.append(link);
+    } else if (event.locationDemoMessage) {
       const button = element('button', 'map-link'); button.type = 'button';
       const message = element('p', 'location-demo-message', event.locationDemoMessage);
       message.id = `${event.id}LocationDemo`; message.hidden = true; message.setAttribute('role', 'status');
@@ -135,15 +145,45 @@
       button.append(svg, element('span', '', event.mapLabel)); actions.append(button, message);
     }
     const calendar = element('a', 'map-link calendar-link', event.calendarLabel);
-    calendar.href = './media/nikkah.ics'; calendar.download = 'Amina-Zayan-Nikkah.ics';
+    calendar.href = event.calendarUrl || './media/walima.ics';
+    calendar.download = event.calendarFilename || `${event.name.replace(/\s+/g, '-')}.ics`;
     actions.append(calendar); card.append(actions);
     section.append(card); select('#events').append(section);
   });
-  select('#handsImage').src = config.media.hands;
-  select('#closingMonogram').src = config.media.monogram;
-  select('#dua').hidden = !config.dua.enabled;
-  select('#duaTranslation').hidden = !config.dua.translation.trim();
-  select('#duaMessage').hidden = !config.dua.message.trim();
+  if (config.preEvents && config.preEvents.length) {
+    const preSection = element('section', 'pre-events-section reveal');
+    preSection.id = 'preEvents';
+    preSection.append(element('p', 'pre-events-eyebrow', config.preEventsHeading || 'Pre-Wedding Celebrations'));
+    const grid = element('div', 'pre-events-grid');
+    config.preEvents.forEach(item => {
+      const box = element('div', 'pre-event-box');
+      const title = element('h3', 'pre-event-name', item.name);
+      const ornament = element('div', 'pre-event-ornament');
+      ornament.setAttribute('aria-hidden', 'true');
+      ornament.append(element('span', '', '✦'));
+      const date = element('p', 'pre-event-date', `${item.weekday ? item.weekday + ', ' : ''}${item.date}`);
+      const time = element('p', 'pre-event-time');
+      const icon = element('i', 'fa-solid fa-clock');
+      icon.setAttribute('aria-hidden', 'true');
+      time.append(icon, document.createTextNode(` ${item.time}`));
+      box.append(title, ornament, date, time);
+      grid.append(box);
+    });
+    preSection.append(grid);
+    select('#events').append(preSection);
+  }
+  const handsImg = select('#handsImage');
+  if (handsImg) handsImg.src = config.media.hands;
+  const closingMono = select('#closingMonogram');
+  if (closingMono) closingMono.src = config.media.monogram;
+  const duaSection = select('#dua');
+  if (duaSection) {
+    duaSection.hidden = !config.dua.enabled;
+    const trans = select('#duaTranslation');
+    if (trans) trans.hidden = !config.dua.translation.trim();
+    const msg = select('#duaMessage');
+    if (msg) msg.hidden = !config.dua.message.trim();
+  }
 
   const intro = select('#introVideo'), poster = select('#introPoster'), hero = select('#heroPoster');
   const opening = select('#opening'), gate = select('#openingGate'), invitation = select('#invitation');

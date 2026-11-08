@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Noor Invites//Dr Arish and Dr Nayyara Dawat e Walima//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:arish-nayyara-walima-20270101@noorinvites.com
+DTSTAMP:20261108T000000Z
+DTSTART:20270101T133000Z
+DTEND:20270101T173000Z
+SUMMARY:Dr. Arish & Dr. Nayyara — Dawat e Walima
+LOCATION:Canossa Convent High School\, Mahim West\, Mumbai - 400016
+DESCRIPTION:Dawat-e-Walima celebration of Dr. Arish (s/o Shamshul Qamar Farooqui) & Dr. Nayyara (d/o Mohd Nazim)\nDate: Friday\, 1 January 2027 at 7:00 pm IST.\nVenue: Canossa Convent High School\, Mahim West\, Mumbai - 400016.
+END:VEVENT
+END:VCALENDAR

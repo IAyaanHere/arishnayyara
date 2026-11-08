@@ -220,10 +220,14 @@ body { background:#e9e2d6; }
 /* Two-colour bronze/champagne typography, with local flowing calligraphy. */
 :root { --font-script:'Parisienne',cursive; --text:#705236; --muted:#705236; --gold:#A08048; --maroon:#705236; --deep-maroon:#705236; }
 .hero-names,.formal-name { font-family:var(--font-script); color:var(--gold); }
-.hero-names { flex-direction:row; justify-content:center; align-items:baseline; flex-wrap:nowrap; white-space:nowrap; font-size:clamp(30px,10cqw,56px); line-height:1.15; gap:.18em; }
+.hero-names { display:flex; flex-direction:column; justify-content:center; align-items:center; flex-wrap:nowrap; white-space:normal; font-family:var(--font-script); font-size:clamp(30px,8.5cqw,46px); line-height:1.1; gap:2px; margin:4px auto; color:#6a4422; text-shadow:0 1px 10px #ffffff,0 0 16px #ffffff,0 0 24px #fffbf2; }
+.hero-amp { font-family:var(--font-display),serif; font-style:italic; font-size:clamp(16px,4cqw,22px); color:#8c6838; line-height:1; margin:2px auto; text-shadow:0 1px 8px #ffffff,0 0 14px #ffffff; }
+.hero-bismillah { flex:none; color:#4a2c16; font-size:clamp(15px,4.2cqw,22px); line-height:1.4; text-shadow:0 1px 8px #ffffff,0 0 16px #ffffff,0 0 24px #fffbf2; }
+.hero-family { color:#4a2c16; font-family:var(--font-label); text-transform:uppercase; font-size:clamp(11px,2.9cqw,14px); letter-spacing:.22em; font-weight:700; margin-top:2px; text-shadow:0 1px 8px #ffffff,0 0 14px #ffffff,0 0 24px #fffbf2; }
+.hero-occasions { display:inline-block; font-family:var(--font-label); text-transform:uppercase; font-size:clamp(14px,3.8cqw,18px); letter-spacing:.28em; font-weight:800; margin:8px auto 0; color:#3b190c !important; text-shadow:0 0 2px #fff,0 0 8px #fff,0 0 16px #ffffff,0 1px 4px #ffffff,0 2px 10px #ffffff; }
 .hero-amp { font-size:clamp(19px,4.4cqw,27px); }
 .formal-name { font-size:clamp(30px,9.5cqw,52px); line-height:1.15; white-space:nowrap; }
-.hero-bismillah,.hero-family,.hero-occasions,.formal-intro,.formal-relation,.formal-family,.verse-translation,.verse-reference { color:var(--text); }
+.hero-bismillah,.hero-family,.formal-intro,.formal-relation,.formal-family,.verse-translation,.verse-reference { color:var(--text); }
 .verse-arabic,.dua-prayer,.dua-arabic,.dua-message { color:var(--gold); }
 .dua-content h2,.gift-copy h2 { color:var(--text); }
 .celebration-message { color:#f2ece0; }
@@ -234,22 +238,36 @@ body:not(.is-chrome-ready) .hero .scroll-cue,body:not(.is-chrome-ready) .hero + 
 .hero .scroll-cue,.hero + .royal-seam { transition:opacity .5s ease; }
 .is-chrome-ready .hero .scroll-cue,.is-chrome-ready .hero + .royal-seam { opacity:1; transition-delay:0s; }
 /* Nine-slice pearl frame keeps corner flowers and the satin bow proportional. */
-.event-card { border:1px solid transparent; background:var(--ivory); border-image-source:var(--event-bg); border-image-slice:18% 12% 15% 12% fill; border-image-width:clamp(100px,29cqw,165px) clamp(27px,8cqw,45px) clamp(85px,24cqw,135px); border-image-repeat:stretch; padding:clamp(155px,42vw,245px) 14% 125px; }
+.event-card { border:1px solid transparent; background:var(--ivory); border-image-source:var(--event-bg); border-image-slice:18% 12% 15% 12% fill; border-image-width:clamp(100px,29cqw,165px) clamp(27px,8cqw,45px) clamp(85px,24cqw,135px); border-image-repeat:stretch; padding:clamp(120px,32vw,175px) 14% clamp(90px,24vw,140px); }
 .event-card::before,.event-card::after { display:none; }
 .event-invocation { font-family:var(--font-arabic); font-size:clamp(21px,5.5vw,29px); line-height:1.8; color:var(--text); margin-bottom:7px; }
-.event-name { font-family:var(--font-script); color:var(--gold); font-size:clamp(49px,13vw,70px); line-height:1.15; margin:0; }
+.event-name { font-family:var(--font-script); color:var(--gold); font-size:clamp(34px,8.5vw,46px); line-height:1.15; margin:0 auto; white-space:nowrap; }
+.event-card .ornament { margin:12px auto 16px; width:90px; }
+.event-detail { margin-top:18px; }
+.event-detail-icon { display:block; color:var(--gold); font-size:20px; line-height:1; margin-bottom:8px; }
+.event-detail dt { color:var(--gold); font-size:10px; letter-spacing:.22em; }
+.event-weekday { font-family:var(--font-label); font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--gold); margin-bottom:2px; font-weight:600; }
+.event-date { font-size:clamp(19px,4.8vw,23px); color:var(--maroon); font-weight:600; }
+.event-card .programme { width:min(100%,320px); margin:0 auto; }
+.programme-row { display:flex; justify-content:space-between; align-items:baseline; gap:12px; padding:8px 0; border-bottom:1px dashed #b2925033; }
+.programme-row:last-child { border-bottom:none; }
+.programme-name { font-size:clamp(15px,4vw,17px) !important; color:#3b190c !important; font-weight:700 !important; font-family:var(--font-body); letter-spacing:.02em; }
+.programme-time { font-size:clamp(15px,4vw,17px) !important; color:#855d28 !important; font-weight:700 !important; font-family:var(--font-label); letter-spacing:.05em; white-space:nowrap; }
+.event-venue { font-size:clamp(18px,4.5vw,22px); color:var(--maroon); font-weight:600; line-height:1.3; }
+.event-address { font-size:12px; line-height:1.7; color:var(--text); margin-top:4px; }
+.event-actions { margin-top:20px; }
 .event-card .ornament { margin:17px auto 20px; }
 .event-detail { margin-top:25px; }
 .event-detail-icon { display:block; color:var(--text); font-size:24px; line-height:1; margin-bottom:13px; }
 .event-detail dt { color:var(--gold); }
 .event-date { font-size:clamp(20px,5.4vw,26px); }
 .programme-row { gap:8px; padding:9px 0; }
-.programme-name { font-size:12px; color:var(--text); }
-.programme-time { font-size:19px; color:var(--gold); }
+.programme-name { font-size:clamp(16px,4.2vw,18px) !important; color:#3b190c !important; font-weight:700 !important; font-family:var(--font-body); letter-spacing:.02em; }
+.programme-time { font-size:clamp(16px,4.2vw,18px) !important; color:#855d28 !important; font-weight:700 !important; font-family:var(--font-label); letter-spacing:.05em; white-space:nowrap; }
 .event-venue { font-size:24px; color:var(--text); }
 .event-address { font-size:12px; line-height:1.8; color:var(--text); }
 .event-actions { margin-top:22px; }
-@media(max-width:380px) { .event-card { padding:145px 13% 112px; } .programme-name { font-size:11px; } .programme-time { font-size:17px; } .event-venue { font-size:22px; } }
+@media(max-width:380px) { .event-card { padding:145px 13% 112px; } .programme-name { font-size:15px !important; } .programme-time { font-size:15px !important; } .event-venue { font-size:22px; } }
 
 /* Scale the top/bottom artwork uniformly; extend only repeating side garlands. */
 .event-card { border:0; border-image:none; background:#f1e8dc; }
@@ -261,7 +279,7 @@ body:not(.is-chrome-ready) .hero .scroll-cue,body:not(.is-chrome-ready) .hero + 
 .event-frame-top { top:0; left:0; right:0; height:62cqw; background:var(--event-bg) center top/100% auto no-repeat; mask-image:linear-gradient(#000 83%,transparent); }
 .event-frame-bottom { bottom:0; left:0; right:0; height:55cqw; background:var(--event-bg) center bottom/100% auto no-repeat; mask-image:linear-gradient(transparent,#000 18%); }
 
-.event-card { padding-bottom:clamp(125px,35vw,210px); }
+.event-card { padding-bottom:clamp(90px,24vw,140px); }
 @media(max-width:380px) { .event-card { padding-bottom:112px; } }
 
 /* Inset programme rows from the decorative side garlands. */
