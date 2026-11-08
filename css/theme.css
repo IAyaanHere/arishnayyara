@@ -227,7 +227,7 @@ body { background:#e9e2d6; }
 .hero-occasions { display:inline-block; font-family:var(--font-label); text-transform:uppercase; font-size:clamp(14px,3.8cqw,18px); letter-spacing:.28em; font-weight:800; margin:8px auto 0; color:#3b190c !important; text-shadow:0 0 2px #fff,0 0 8px #fff,0 0 16px #ffffff,0 1px 4px #ffffff,0 2px 10px #ffffff; }
 .hero-amp { font-size:clamp(19px,4.4cqw,27px); }
 .formal-name { font-size:clamp(30px,9.5cqw,52px); line-height:1.15; white-space:nowrap; }
-.hero-bismillah,.hero-family,.formal-intro,.formal-relation,.formal-family,.verse-translation,.verse-reference { color:var(--text); }
+.hero-bismillah,.hero-family,.formal-intro,.verse-translation,.verse-reference { color:var(--text); }
 .verse-arabic,.dua-prayer,.dua-arabic,.dua-message { color:var(--gold); }
 .dua-content h2,.gift-copy h2 { color:var(--text); }
 .celebration-message { color:#f2ece0; }
@@ -448,4 +448,67 @@ body:not(.is-chrome-ready) .hero .scroll-cue,body:not(.is-chrome-ready) .hero + 
   opacity: 1;
   color: #fff;
   text-decoration: underline;
+}
+
+/* Uniform, aesthetic parents name & relation styling */
+.formal-family {
+  font-family: 'Marcellus', 'Cormorant SC', serif !important;
+  font-size: clamp(16px, 4.2vw, 20px) !important;
+  font-weight: 600 !important;
+  letter-spacing: .06em !important;
+  color: #7a5530 !important;
+  line-height: 1.4 !important;
+  margin: 5px auto 0 !important;
+  max-width: 380px !important;
+}
+
+.formal-relation {
+  font-family: var(--font-label, 'Cormorant SC'), serif !important;
+  font-size: clamp(11px, 2.6vw, 12px) !important;
+  letter-spacing: .24em !important;
+  text-transform: uppercase !important;
+  color: #a08048 !important;
+  font-weight: 600 !important;
+  margin: 10px auto 2px !important;
+}
+
+.formal-joining {
+  font-family: 'Great Vibes', var(--font-script), cursive !important;
+  font-size: clamp(26px, 6.5vw, 34px) !important;
+  font-style: normal !important;
+  letter-spacing: 0 !important;
+  color: #8c6838 !important;
+  margin: 16px auto 8px !important;
+}
+
+/* Aesthetic Dinner badge in Programme (no time) */
+.programme-row.is-single {
+  justify-content: center !important;
+  text-align: center !important;
+  border-bottom: none !important;
+  padding: 12px 0 2px !important;
+}
+
+.programme-single {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-family: 'Marcellus', 'Cormorant SC', serif;
+  font-size: clamp(15px, 3.8vw, 18px);
+  color: #7a501a;
+  font-weight: 600;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  padding: 6px 20px;
+  background: #fbf7ee;
+  border: 1px solid #d4c4a888;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px #2b0b0b0a;
+}
+
+.programme-single::before, .programme-single::after {
+  content: '✦';
+  font-size: 10px;
+  color: #c5a059;
 }

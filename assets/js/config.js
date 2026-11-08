@@ -117,7 +117,7 @@ window.INVITATION_CONFIG = {
         },
         {
           "name": "Dinner",
-          "time": "8:30 pm"
+          "time": ""
         }
       ],
       "venue": "Canossa Convent High School",

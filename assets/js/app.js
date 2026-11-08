@@ -108,8 +108,14 @@
     detail(config.labels.date, ...date).querySelector('dt').classList.add('sr-only');
     const programme = element('div', 'programme');
     event.programme.forEach(item => {
-      const row = element('div', 'programme-row');
-      row.append(element('span', 'programme-name', item.name), element('span', 'programme-time', item.time));
+      const hasTime = Boolean(item.time && item.time.trim());
+      const row = element('div', 'programme-row' + (hasTime ? '' : ' is-single'));
+      if (hasTime) {
+        row.append(element('span', 'programme-name', item.name), element('span', 'programme-time', item.time));
+      } else {
+        const dinnerSpan = element('span', 'programme-single', item.name);
+        row.append(dinnerSpan);
+      }
       programme.append(row);
     });
     detail(config.labels.time, programme);
@@ -161,12 +167,16 @@
       const ornament = element('div', 'pre-event-ornament');
       ornament.setAttribute('aria-hidden', 'true');
       ornament.append(element('span', '', '✦'));
-      const date = element('p', 'pre-event-date', `${item.weekday ? item.weekday + ', ' : ''}${item.date}`);
+      box.append(title, ornament);
+      if (item.weekday) {
+        box.append(element('p', 'pre-event-weekday', item.weekday));
+      }
+      box.append(element('p', 'pre-event-date', item.date));
       const time = element('p', 'pre-event-time');
       const icon = element('i', 'fa-solid fa-clock');
       icon.setAttribute('aria-hidden', 'true');
       time.append(icon, document.createTextNode(` ${item.time}`));
-      box.append(title, ornament, date, time);
+      box.append(time);
       grid.append(box);
     });
     preSection.append(grid);

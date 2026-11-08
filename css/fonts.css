@@ -63,3 +63,18 @@
   font-display: swap;
   src: url(../fonts/parisienne-regular.ttf) format('truetype');
 }
+
+@font-face {
+  font-family: 'Great Vibes';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/great-vibes-regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Alex Brush';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/alex-brush-regular.ttf) format('truetype');
+}
