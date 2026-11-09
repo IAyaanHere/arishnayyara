@@ -621,3 +621,99 @@ body:not(.is-chrome-ready) .hero .scroll-cue,body:not(.is-chrome-ready) .hero + 
   font-weight: 500 !important;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.45) !important;
 }
+
+/* Pre-Events Dress Code Styling with Theme Graphics */
+.pre-event-dresscode {
+  margin-top: 14px;
+  padding: 10px 14px 11px;
+  background: linear-gradient(180deg, rgba(255, 253, 249, 0.95) 0%, rgba(248, 241, 230, 0.92) 100%);
+  border: 1px solid rgba(197, 160, 89, 0.42);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(74, 44, 22, 0.04), inset 0 0 10px rgba(255, 255, 255, 0.85);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  max-width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pre-event-dress-header {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #a58045;
+  margin-bottom: 1px;
+}
+
+.pre-event-dress-icon {
+  color: #a58045;
+  flex-shrink: 0;
+}
+
+.pre-event-dress-label {
+  font-family: var(--font-label, 'Cormorant SC'), serif;
+  font-size: 10px;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #a58045;
+}
+
+.pre-event-dress-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.pre-event-dress-value {
+  font-family: 'Marcellus', serif;
+  font-size: clamp(13px, 3vw, 14.5px);
+  color: #4a2c16;
+  font-weight: 500;
+  letter-spacing: .02em;
+  line-height: 1.25;
+}
+
+.dress-swatches {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 3px 8px;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 12px;
+  border: 1px solid rgba(197, 160, 89, 0.3);
+}
+
+.swatch-dot {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  transition: transform .2s ease;
+}
+
+.swatch-dot:hover {
+  transform: scale(1.25);
+}
+
+.swatch-dot--black {
+  background: linear-gradient(135deg, #2b2b2e 0%, #111113 100%);
+  border: 1.5px solid #c5a059;
+  box-shadow: 0 0 4px rgba(197, 160, 89, 0.4), 0 1px 3px rgba(0, 0, 0, 0.3);
+  width: 13px;
+  height: 13px;
+}
+
+.swatch-dot--gold {
+  background: linear-gradient(135deg, #eddba6 0%, #c5a059 100%);
+  border: 1px solid #9e793e;
+  width: 11px;
+  height: 11px;
+}

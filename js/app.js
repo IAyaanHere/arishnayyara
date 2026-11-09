@@ -177,6 +177,49 @@
       icon.setAttribute('aria-hidden', 'true');
       time.append(icon, document.createTextNode(` ${item.time}`));
       box.append(time);
+      if (item.dressCode) {
+        const dressBox = element('div', `pre-event-dresscode pre-event-dresscode--${item.dressCodeType || 'default'}`);
+        const dressHeader = element('div', 'pre-event-dress-header');
+        const svgNs = 'http://www.w3.org/2000/svg';
+        const svg = document.createElementNS(svgNs, 'svg');
+        svg.setAttribute('class', 'pre-event-dress-icon');
+        svg.setAttribute('viewBox', '0 0 24 24');
+        svg.setAttribute('width', '13');
+        svg.setAttribute('height', '13');
+        svg.setAttribute('fill', 'none');
+        svg.setAttribute('stroke', 'currentColor');
+        svg.setAttribute('stroke-width', '1.6');
+        svg.setAttribute('stroke-linecap', 'round');
+        svg.setAttribute('stroke-linejoin', 'round');
+        svg.setAttribute('aria-hidden', 'true');
+        const path = document.createElementNS(svgNs, 'path');
+        path.setAttribute('d', 'M12 3a2.5 2.5 0 0 0-2.5 2.5c0 1.1.7 2 1.7 2.4L3 13.5a1.8 1.8 0 0 0 1.2 3.1h15.6a1.8 1.8 0 0 0 1.2-3.1L12.8 7.9A2.5 2.5 0 0 0 12 3z');
+        svg.append(path);
+        const label = element('span', 'pre-event-dress-label', 'Dress Code');
+        dressHeader.append(svg, label);
+
+        const dressBody = element('div', 'pre-event-dress-body');
+        const dressVal = element('span', 'pre-event-dress-value', item.dressCode);
+        dressBody.append(dressVal);
+
+        const swatches = element('div', `dress-swatches dress-swatches--${item.dressCodeType || 'default'}`);
+        swatches.setAttribute('aria-hidden', 'true');
+        if (item.dressCodeType === 'open') {
+          const colors = ['#f6c445', '#f28e82', '#9fc490', '#c2aff0', '#faebd7'];
+          colors.forEach(col => {
+            const dot = element('span', 'swatch-dot');
+            dot.style.backgroundColor = col;
+            swatches.append(dot);
+          });
+        } else if (item.dressCodeType === 'black') {
+          const dotBlack = element('span', 'swatch-dot swatch-dot--black');
+          const dotGold = element('span', 'swatch-dot swatch-dot--gold');
+          swatches.append(dotBlack, dotGold);
+        }
+        dressBody.append(swatches);
+        dressBox.append(dressHeader, dressBody);
+        box.append(dressBox);
+      }
       grid.append(box);
     });
     preSection.append(grid);

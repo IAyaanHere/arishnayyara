@@ -136,13 +136,17 @@ window.INVITATION_CONFIG = {
       "name": "Manjha",
       "weekday": "Monday",
       "date": "28 December 2026",
-      "time": "7:00 PM"
+      "time": "7:00 PM",
+      "dressCode": "Colour Palette: Open",
+      "dressCodeType": "open"
     },
     {
       "name": "Qawwali Night",
       "weekday": "Thursday",
       "date": "31 December 2026",
-      "time": "7:00 PM"
+      "time": "7:00 PM",
+      "dressCode": "Elegant Black",
+      "dressCodeType": "black"
     }
   ],
   "labels": {
